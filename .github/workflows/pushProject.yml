@@ -1,0 +1,17 @@
+name: Test gitHub Actions on pushing
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build: 
+    runs-on: windows
+    
+    steps:
+    - name: Install dep
+    run: npm install
+    
+    -name: Build project
+    run: npm build
+  
